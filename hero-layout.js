@@ -1,0 +1,1 @@
+(()=>{const hero=document.currentScript.closest('.hp-hero-redesign');const fit=()=>{const box=hero.getBoundingClientRect();hero.style.setProperty('--hero-page-width',document.documentElement.clientWidth+'px');hero.style.setProperty('--hero-page-left',-box.left+'px')};fit();window.addEventListener('resize',fit,{passive:true})})();

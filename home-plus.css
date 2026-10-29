@@ -1,0 +1,39 @@
+/* Сальса Плюс — усиление главной (доверие, страхи, музыка, отзывы) */
+:root{--sp-orange:#f26a1b;--sp-orange-text:#b84a00;--sp-ink:#2b2b2b;--sp-soft:#fff4ea;--sp-line:#f1dccb}
+.hp-hero-photo video.hp-hero-video{display:block;width:100%;height:100%;object-fit:cover;object-position:40% center}
+@media (prefers-reduced-motion:reduce){.hp-hero-video{animation:none}}
+#home-title .hp-h1-seo{display:block;font-size:clamp(14px,1.6vw,18px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sp-orange-text);margin:0 0 10px;line-height:1.3}
+.hp-trust{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;margin:10px 0 0;font-size:15px;color:#444}
+.hp-trust span::before{content:"✓ ";color:var(--sp-orange);font-weight:700}
+.hp-trust a{color:var(--sp-ink);text-decoration:none;border-bottom:1px solid var(--sp-line)}
+.hp-trust a b{color:#e0a100}
+.hp-offer{margin:12px 0 0;padding:10px 14px;background:var(--sp-soft);border-radius:12px;font-size:16px;line-height:1.45;color:var(--sp-ink)}
+.hp-offer b{color:var(--sp-orange-text)}
+.hp-messengers{display:inline-flex;gap:10px;align-items:center;flex-wrap:wrap}
+.hp-messengers a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:2px solid var(--sp-line);border-radius:24px;color:var(--sp-ink);font-weight:700;text-decoration:none}
+.hp-messengers a:hover,.hp-messengers a:focus-visible{border-color:var(--sp-orange);color:var(--sp-orange-text)}
+/* цифры */
+.hp-stats ul{list-style:none;margin:0;padding:18px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;background:var(--sp-soft);border-radius:18px}
+.hp-stats li{display:flex;flex-direction:column;gap:4px;text-align:center}
+.hp-stats b{font-size:clamp(22px,2.6vw,32px);line-height:1.1;color:var(--sp-orange-text)}
+.hp-stats span{font-size:14px;color:#555;line-height:1.3}
+/* страхи */
+.hp-fears h2,.hp-music h2,.hp-reviews h2{margin:0 0 18px}
+.hp-fears-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hp-fears-grid article{padding:18px;border:1px solid var(--sp-line);border-radius:16px;background:#fff}
+.hp-fears-grid h3{margin:0 0 6px;font-size:18px}
+.hp-fears-grid p{margin:0;color:#444;line-height:1.5}
+.hp-fears-cta{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:26px 0 0!important}
+.hp-fears-cta .hp-button{width:auto;display:inline-flex;align-items:center;min-height:48px;padding:0 26px;border-radius:26px;background:var(--sp-orange);color:#fff!important;font-weight:700}
+.hp-fears-cta span{color:#555}
+/* музыка */
+.hp-music{max-width:860px}
+.hp-music p{font-size:17px;line-height:1.6;color:#333;margin:0 0 12px}
+.hp-music a{color:var(--sp-orange-text);font-weight:700}
+/* отзывы */
+.hp-reviews-grid{display:grid;grid-template-columns:repeat(2,minmax(0,320px));gap:14px}
+.hp-review-card{display:flex;flex-direction:column;gap:4px;padding:20px;border-radius:16px;background:var(--sp-soft);color:var(--sp-ink);text-decoration:none}
+.hp-review-card b{font-size:30px;color:#e0a100}
+.hp-review-card em{font-style:normal;color:var(--sp-orange-text);font-weight:700;margin-top:6px}
+@media (max-width:900px){.hp-stats ul{grid-template-columns:repeat(2,1fr)}.hp-stats li:last-child{grid-column:1/-1}.hp-fears-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.hp-fears-grid,.hp-reviews-grid{grid-template-columns:1fr}.hp-offer{font-size:15px}}

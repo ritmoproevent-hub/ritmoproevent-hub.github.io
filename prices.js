@@ -1,0 +1,2 @@
+'use strict';
+(()=>{for(const link of document.querySelectorAll('[data-price-order]'))link.addEventListener('click',e=>{const template=document.getElementById('price-order-'+link.dataset.priceOrder),dialog=document.getElementById('review-dialog'),content=document.getElementById('review-dialog-content');if(!template||!dialog||!content)return;e.preventDefault();content.replaceChildren(template.content.cloneNode(true));dialog.showModal()})})();

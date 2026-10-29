@@ -1,0 +1,93 @@
+/* Scoped hero composition. The photograph remains a replaceable HTML img. */
+body .wrapper .hp-hero-redesign{position:relative;isolation:isolate;grid-template-columns:1.12fr 1fr;gap:24px;align-items:center!important;padding-bottom:76px;padding-top:64px!important;min-height:580px}
+.hp-hero-redesign::before{content:"";position:absolute;z-index:-2;inset:0 calc((1160px - min(100vw,1160px)) / -2) -12px;background:radial-gradient(ellipse at 80% 30%,#ffe8ce88,transparent 65%),linear-gradient(180deg,#fffaf4,#fcf2e7 75%,#fff);border-radius:0 0 46% 14% / 0 0 8% 5%;pointer-events:none}
+body .wrapper .hp-hero-redesign .hp-hero-copy{position:relative;z-index:2;align-self:center;min-width:0}
+body .wrapper .hp-hero-redesign h1{font-size:clamp(36px,4.3vw,55px)!important;line-height:1.3!important;letter-spacing:-.035em!important;margin:0 0 24px!important;text-wrap:initial}
+.hp-hero-redesign h1>span{display:block;white-space:nowrap}.hp-hero-redesign h1>span:last-child{color:#ff7100}
+body .wrapper .hp-hero-redesign .hp-hero-lead{font-size:17px;line-height:1.75;max-width:49ch;margin-bottom:0}
+body .wrapper .hp-hero-redesign .hp-actions{gap:22px;margin-top:32px;flex-wrap:wrap}
+body .wrapper .hp-hero-redesign .hp-hero-primary{border-radius:999px!important;background:linear-gradient(135deg,#ff9619,#ff6900);border:1px solid #ff7b00;color:white!important;min-height:62px;padding:9px 10px 9px 23px;gap:18px;box-shadow:0 8px 22px #ff7b0022;font-size:15px}
+.hp-hero-primary>span{display:grid;place-items:center;flex:0 0 40px;height:40px;border-radius:50%;background:white;color:#ff7100;font:30px/1 Arial}
+.hp-hero-redesign .hp-hero-watch{display:flex;align-items:center;gap:12px;color:#202630!important;text-decoration:none;font:14px/1.6 "Salsa Comfortaa",Arial,sans-serif}
+.hp-hero-watch>span:first-child{display:grid;place-items:center;width:50px;height:50px;flex-shrink:0;border-radius:50%;background:white;box-shadow:0 2px 12px #00000012;color:#ff7100;font-size:19px}
+.hp-hero-redesign .hp-hero-visual{position:relative;min-width:0;height:490px;align-self:center;margin-left:8px}
+.hp-hero-redesign .hp-hero-orange-shape{position:absolute;inset:-22px -14px -12px -34px;background:linear-gradient(135deg,#ffbd65,#ff8c19 55%,#ffcb85);border-radius:45% 17% 31% 39% / 25% 32% 22% 39%;transform:rotate(-5deg)}
+body .wrapper .hp-hero-redesign .hp-hero-photo{position:absolute;inset:0;margin:0;height:auto;min-height:0;border-radius:43% 14% 30% 36% / 24% 29% 21% 36%!important;overflow:hidden;background:#ff921c}
+body .wrapper .hp-hero-redesign .hp-hero-photo img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:35% center}
+.hp-hero-redesign .hp-hero-note{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;padding:17px 22px;border-radius:50px;box-shadow:0 8px 24px #52280012;font:700 13px/1.6 "Salsa Comfortaa",Arial,sans-serif}
+.hp-hero-note>span:first-child{font:36px/1 Arial}.hp-hero-redesign .hp-hero-note--people{left:-35px;bottom:70px;background:white;color:#242b27;transform:rotate(-5deg)}.hp-hero-note--people>span:first-child{color:#ff7100}
+.hp-hero-redesign .hp-hero-note--levels{right:-8px;bottom:-8px;color:white;background:linear-gradient(135deg,#ff9419,#ff7100);border:1px solid white;transform:rotate(-8deg)}
+.hp-hero-redesign a:focus-visible{outline:3px solid #343b48;outline-offset:5px}
+@media(max-width:1023px){body .wrapper .hp-hero-redesign{gap:22px;min-height:0;padding-block:48px 64px!important}body .wrapper .hp-hero-redesign h1{font-size:clamp(28px,4.2vw,43px)!important}.hp-hero-redesign .hp-hero-visual{height:440px}.hp-hero-redesign .hp-hero-note{font-size:11px;padding:14px 16px}.hp-hero-redesign .hp-hero-note--people{left:-18px}body .wrapper .hp-hero-redesign .hp-hero-lead{font-size:16px}}
+@media(max-width:760px){body .wrapper .hp-hero-redesign{grid-template-columns:1fr;gap:46px;padding-block:32px 60px!important}.hp-hero-redesign::before{inset:0 0 -8px}body .wrapper .hp-hero-redesign h1{font-size:clamp(28px,6.8vw,48px)!important;letter-spacing:-.03em!important;margin-bottom:18px!important}body .wrapper .hp-hero-redesign .hp-actions{gap:18px;margin-top:24px}.hp-hero-redesign .hp-hero-visual{height:auto;aspect-ratio:1.12;margin:0 12px 0 18px}.hp-hero-redesign .hp-hero-orange-shape{inset:-12px -9px -9px -18px}.hp-hero-redesign .hp-hero-note--people{left:-15px;bottom:55px}.hp-hero-redesign .hp-hero-note--levels{right:-10px;bottom:-18px}.hp-hero-redesign .hp-hero-note{font-size:10px;padding:12px 15px;gap:8px}.hp-hero-note>span:first-child{font-size:27px}body .wrapper .hp-hero-redesign .hp-hero-primary{min-height:56px;font-size:14px}.hp-hero-redesign .hp-hero-watch{font-size:12px}}
+
+/* Full-width paint without changing header or widening document layout. */
+body .wrapper .hp-hero-redesign::before{inset:0 0 -12px;border-radius:0;box-shadow:0 0 0 100vmax #fff8f0;clip-path:inset(0 -100vmax);mask-image:linear-gradient(#000 0%,#000 88%,transparent 100%)}
+body .wrapper .hp-hero-redesign .hp-hero-photo img{object-position:12% center}
+@media(min-width:1024px){.hp-hero-redesign .hp-hero-visual{height:440px}body .wrapper .hp-hero-redesign{min-height:560px}}
+@media(max-width:760px){body .wrapper .hp-hero-redesign{width:100%;max-width:100%}.hp-hero-redesign .hp-hero-visual{aspect-ratio:1.25}.hp-hero-redesign .hp-hero-photo img{object-position:12% center}}
+
+/* S-shaped orange wave and a more open photograph, following the reference. */
+.hp-hero-redesign .hp-hero-shape-defs{position:absolute;pointer-events:none}
+body .wrapper .hp-hero-redesign .hp-hero-photo{border-radius:0!important;clip-path:url(#hero-photo-wave)}
+.hp-hero-redesign .hp-hero-orange-shape{border-radius:0;clip-path:polygon(25% 0,100% 0,100% 84%,85% 94%,65% 100%,35% 99%,12% 92%,1% 80%,3% 68%,12% 52%,14% 43%,3% 31%,1% 22%,7% 12%);background:linear-gradient(120deg,#ffc779 0%,#ff8b0a 35%,#ff6e00 65%,#ffc875 100%);transform:rotate(-2deg)}
+.hp-hero-redesign .hp-hero-orange-shape::after{content:"";position:absolute;inset:8px 12px;border:2px solid #ffbd64;border-radius:45% 0 35% 30%;transform:rotate(-5deg)}
+body .wrapper .hp-hero-redesign::before{mask-image:linear-gradient(transparent,#000 9%,#000 86%,transparent)}
+@media(min-width:1024px){body .wrapper .hp-hero-redesign{grid-template-columns:1fr 1.1fr;gap:16px}.hp-hero-redesign .hp-hero-visual{margin-left:0;margin-right:calc(-1 * min(6vw,90px));height:430px}.hp-hero-redesign .hp-hero-orange-shape{inset:-16px -5px -12px -32px}body .wrapper .hp-hero-redesign .hp-hero-photo img{object-position:7% center}.hp-hero-redesign .hp-hero-note--people{left:-14px;bottom:55px}.hp-hero-redesign .hp-hero-note--levels{right:20px}}
+@media(max-width:760px){body .wrapper .hp-hero-redesign .hp-hero-photo{clip-path:url(#hero-photo-wave)}.hp-hero-redesign .hp-hero-visual{aspect-ratio:1.4}}
+
+.hp-hero-redesign .hp-hero-orange-shape{clip-path:url(#hero-photo-wave)}
+
+/* Separate reference-shaped assets: text remains HTML, not baked into graphics. */
+.hp-hero-redesign .hp-hero-wave-layer{position:absolute;inset:-8px -7px -8px -35px;width:calc(100% + 42px);height:calc(100% + 16px);z-index:1;pointer-events:none}
+body .wrapper .hp-hero-redesign .hp-hero-photo{clip-path:url(#hero-photo-wave);inset:0}
+.hp-hero-redesign .hp-hero-rays{position:absolute;right:15px;top:38px;width:48px;height:64px;z-index:2;pointer-events:none}
+body .wrapper .hp-hero-redesign .hp-hero-note{box-sizing:border-box;min-height:100px;width:275px;padding:18px 23px;gap:16px;border:0;border-radius:0;box-shadow:none;text-decoration:none;filter:drop-shadow(0 6px 14px #52280012);background-size:100% 100%;background-repeat:no-repeat}
+body .wrapper .hp-hero-redesign .hp-hero-note--people{background-color:transparent;background-image:url('/media/hero/badge-white.svg');left:12px;bottom:70px;transform:rotate(-6deg)}
+body .wrapper .hp-hero-redesign .hp-hero-note--levels{background-color:transparent;background-image:url('/media/hero/badge-orange.svg');right:6px;bottom:2px;transform:rotate(-9deg)}
+.hp-hero-redesign .hp-hero-note>img{position:static;width:40px;height:40px;flex:0 0 40px;object-fit:contain}
+.hp-hero-redesign .hp-hero-note--people:hover{filter:drop-shadow(0 9px 18px #52280024)}
+@media(min-width:1024px){.hp-hero-redesign .hp-hero-visual{height:440px;margin-left:-12px;margin-right:calc(-1 * min(9vw,140px))}}
+@media(max-width:760px){body .wrapper .hp-hero-redesign .hp-hero-note{width:210px;min-height:78px;padding:12px 18px;gap:10px}.hp-hero-redesign .hp-hero-note>img{width:30px;height:30px;flex-basis:30px}body .wrapper .hp-hero-redesign .hp-hero-note--people{left:-12px;bottom:44px}body .wrapper .hp-hero-redesign .hp-hero-note--levels{right:-8px;bottom:-25px}.hp-hero-redesign .hp-hero-rays{width:32px;height:43px;top:20px;right:8px}}
+
+/* Extend the photo/wave to the actual viewport edge, excluding scrollbar. */
+@media(min-width:1024px){.hp-hero-redesign .hp-hero-visual{margin-right:calc(-1 * var(--hero-edge-extension,140px))}.hp-hero-redesign .hp-hero-wave-layer{right:0;width:calc(100% + 35px)}}
+
+/* Full-page fading cream wave is independent of the photograph. */
+body .wrapper .hp-hero-redesign::before{display:none!important}
+.hp-hero-redesign .hp-hero-page-backdrop{position:absolute;left:var(--hero-page-left,0);top:-25px;bottom:-28px;width:var(--hero-page-width,100%);z-index:-2;pointer-events:none;background:url('/media/hero/page-fading-wave.svg') center/100% 100% no-repeat}
+@media(min-width:1024px){.hp-hero-redesign .hp-hero-visual{margin-left:0;margin-right:0;height:440px}.hp-hero-redesign .hp-hero-wave-layer{right:-7px;width:calc(100% + 42px)}}
+
+/* Keep the orange frame and replaceable photo inside the text grid. */
+body .wrapper .hp-hero-redesign .hp-hero-visual{box-sizing:border-box;margin-inline:0;min-width:0;max-width:100%;isolation:isolate}
+body .wrapper .hp-hero-redesign .hp-hero-wave-layer{inset:0;width:100%;height:100%;object-fit:fill}
+body .wrapper .hp-hero-redesign .hp-hero-photo{inset:8px 0 10px 24px}
+body .wrapper .hp-hero-redesign .hp-hero-note--people{left:0;max-width:calc(100% - 12px)}
+body .wrapper .hp-hero-redesign .hp-hero-note--levels{right:6px;max-width:calc(100% - 12px)}
+@media(max-width:760px){body .wrapper .hp-hero-redesign .hp-hero-visual{margin-inline:0}body .wrapper .hp-hero-redesign .hp-hero-photo{inset:6px 0 8px 14px}body .wrapper .hp-hero-redesign .hp-hero-note--people{left:0}body .wrapper .hp-hero-redesign .hp-hero-note--levels{right:4px}}
+
+@font-face{font-family:"Salsa Hero Nunito";src:url('/font/nunito-variable.ttf') format('truetype');font-style:normal;font-weight:200 1000;font-display:swap}
+body .wrapper .hp-hero-redesign #home-title{font-family:"Salsa Hero Nunito",Arial,sans-serif!important;font-weight:800!important;-webkit-text-stroke:0!important;letter-spacing:-.025em!important}
+
+body .wrapper .hp-hero-redesign .hp-hero-primary{font-family:"Salsa Nunito",Arial,sans-serif!important;font-weight:800!important;font-size:22px;line-height:1.2;min-height:62px;padding:17px 28px;justify-content:center;gap:0}
+@media(max-width:760px){body .wrapper .hp-hero-redesign .hp-hero-primary{font-size:20px;min-height:56px;padding:15px 24px}}
+
+body .wrapper .hp-hero-redesign .hp-hero-watch>span:first-child{width:62px;height:62px;flex:0 0 62px;box-sizing:border-box;display:grid;place-items:center;padding:0}
+.hp-hero-redesign .hp-hero-watch svg{display:block;width:30px;height:30px;transform:translateX(-1px)}
+@media(max-width:760px){body .wrapper .hp-hero-redesign .hp-hero-watch>span:first-child{width:56px;height:56px;flex-basis:56px}}
+
+/* Equal visual weight on hover, with an optically centered rounded play glyph. */
+body .wrapper .hp-hero-redesign .hp-hero-watch{font-family:"Salsa Nunito",Arial,sans-serif!important;font-weight:500;font-size:16px}
+body .wrapper .hp-hero-redesign .hp-hero-watch svg{transform:none}
+body .wrapper .hp-hero-redesign .hp-hero-watch>span:last-child{transition:font-weight .15s ease,color .15s ease}
+body .wrapper .hp-hero-redesign .hp-hero-watch:is(:hover,:focus-visible)>span:last-child{font-weight:800;color:#ff7900}
+body .wrapper .hp-hero-redesign .hp-hero-watch:is(:hover,:focus-visible)>span:first-child{box-shadow:0 4px 16px #ff790026}
+@media(max-width:760px){body .wrapper .hp-hero-redesign .hp-hero-watch{font-size:14px}}
+
+/* Supporting badges stay visually secondary to the main lesson CTA. */
+body .wrapper .hp-hero-redesign .hp-hero-note{width:218px;min-height:80px;padding:14px 18px;gap:10px;font-size:11px;line-height:1.5;filter:drop-shadow(0 3px 8px #5228000d)}
+body .wrapper .hp-hero-redesign .hp-hero-note>img{width:30px;height:30px;flex-basis:30px}
+@media(max-width:760px){body .wrapper .hp-hero-redesign .hp-hero-note{width:176px;min-height:65px;padding:11px 14px;gap:8px;font-size:9px}body .wrapper .hp-hero-redesign .hp-hero-note>img{width:24px;height:24px;flex-basis:24px}}
+
+/* Fit the photo composition to the owner's marked desktop area. */
+@media(min-width:1024px){body .wrapper .hp-hero-redesign .hp-hero-visual{height:500px;margin-top:-60px;margin-bottom:0;top:0}body .wrapper .hp-hero-redesign .hp-hero-photo{inset:8px 0 10px 18px}body .wrapper .hp-hero-redesign .hp-hero-note--people{bottom:64px}body .wrapper .hp-hero-redesign .hp-hero-note--levels{bottom:0;right:12px}}
