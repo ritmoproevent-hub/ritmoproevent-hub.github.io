@@ -826,3 +826,6 @@ body .wrapper .home-prototype-content #home-city h2{text-align:center;margin-inl
 body .wrapper .home-prototype-content #home-announcements>.hp-section-head{display:block;width:100%}
 body .wrapper .home-prototype-content #home-announcements>.hp-section-head>div{width:100%}
 body .wrapper .home-prototype-content #home-announcements h2{text-align:center;margin-inline:auto}
+
+#review-dialog h3{font-size:25px;line-height:1.3;margin:0 0 10px}
+@media (max-width:600px){.review-filters label{min-width:0;flex:1 1 calc(50% - 6px)}.review-filters select{width:100%;max-width:100%;box-sizing:border-box}.timetable-text p{text-align:left}}
