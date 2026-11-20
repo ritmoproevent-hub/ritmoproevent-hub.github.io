@@ -93,14 +93,13 @@
   }
 }
 
-@property --ritmo-outline-angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
+/* A fixed mask keeps the pill shape while its colour layer rotates. */
+.artist-scenes .playlist-outline-button > .ritmo-button-outline {
+  display: none;
 }
-@keyframes ritmo-outline-spin {
-  from { --ritmo-outline-angle: 0deg; }
-  to { --ritmo-outline-angle: 360deg; }
+@keyframes ritmo-outline-rotate {
+  from { transform: translate(-50%, -50%) rotate(0turn); }
+  to { transform: translate(-50%, -50%) rotate(1turn); }
 }
 @layer control-finish {
   @supports (background: conic-gradient(from 0deg, #8b5cf6, #ec4899)) and ((mask-composite: exclude) or (-webkit-mask-composite: xor)) {
@@ -108,34 +107,43 @@
       position: relative !important;
       border-color: transparent !important;
     }
-    .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button::before {
-      content: "" !important;
+    .artist-scenes .playlist-outline-button > .ritmo-button-outline {
+      display: block !important;
       position: absolute !important;
       inset: -1px !important;
       width: auto !important;
       height: auto !important;
+      margin: 0 !important;
       box-sizing: border-box !important;
       border: 0 !important;
       border-radius: inherit !important;
       padding: 3px !important;
-      background: conic-gradient(
-        from var(--ritmo-outline-angle, 0deg),
-        #8b5cf6, #ec4899, #f59e0b, #22d3ee, #8b5cf6
-      ) !important;
+      overflow: hidden !important;
+      background: transparent !important;
       -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
       mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
-      box-shadow: none !important;
       pointer-events: none !important;
-      transform: none !important;
-      animation: ritmo-outline-spin 4s linear infinite;
     }
-    .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button:hover::before {
+    .artist-scenes .playlist-outline-button > .ritmo-button-outline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 150%;
+      aspect-ratio: 1;
+      background: conic-gradient(#8b5cf6, #ec4899, #f59e0b, #22d3ee, #8b5cf6);
+      transform: translate(-50%, -50%) rotate(0turn);
+      animation: ritmo-outline-rotate 4s linear infinite;
+      animation-play-state: running;
+      pointer-events: none;
+    }
+    .artist-scenes .playlist-outline-button:hover > .ritmo-button-outline::before {
       animation-duration: 1.8s;
     }
     @media (prefers-reduced-motion: reduce) {
-      .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button::before {
+      .artist-scenes .playlist-outline-button > .ritmo-button-outline::before {
         animation: none !important;
       }
     }
@@ -187,7 +195,7 @@
     <h2>Ваша группа!</h2>
     <p class="lead">Чангито — группа из Санкт-Петербурга. Мы играем латиноамериканскую музыку на свадьбах, тимбилдингах, днях рождения, других частных праздниках и фестивалях.</p>
     <p class="lead">В репертуаре — авторские песни на испанском и кубинская классика. Можем сыграть для встречи гостей или дать концерт, под который захочется танцевать.</p>
-    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/media/" data-action-tone="neutral"><span class="artist-action-label">Посмотреть артистов</span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/media/" data-action-tone="neutral"><i class="ritmo-button-outline" aria-hidden="true"></i><span class="artist-action-label">Посмотреть артистов</span></a>
   </div>
   <ul class="dance-reels" aria-label="Рилсы под блоком вокалиста" role="list">
     <li class="dance-reel">
@@ -214,7 +222,7 @@
     <p class="eyebrow">01 · Репертуар</p>
     <h2>Как звучит Чангито</h2>
     <p class="lead">Чангито исполняет традиционные кубинские песни, знакомые нескольким поколениям, и современные хиты латиноамериканской эстрады. На сцене ритм задаёт живая кубинская перкуссия. В репертуаре есть несколько русскоязычных композиций в оригинальных латиноамериканских аранжировках. Их можно добавить в программу по желанию.</p>
-    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/playlist/" data-action-tone="neutral"><span class="artist-action-label">Посмотреть плейлист</span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/playlist/" data-action-tone="neutral"><i class="ritmo-button-outline" aria-hidden="true"></i><span class="artist-action-label">Посмотреть плейлист</span></a>
   </div>
 </section>
 <span id="trio-changito"></span>
@@ -237,7 +245,7 @@
         <dd>Вокал, бас, фортепиано, перкуссия, ударные, труба, тромбон и саксофон. Три духовых инструмента придают мелодиям мощное звучание. Подойдёт для фестиваля или праздника, где концерт становится главным событием вечера.</dd>
       </div>
     </dl>
-    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/program/?outfit=official" data-program-outfit data-action-tone="neutral"><span class="artist-action-label">Подобрать состав</span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/program/?outfit=official" data-program-outfit data-action-tone="neutral"><i class="ritmo-button-outline" aria-hidden="true"></i><span class="artist-action-label">Подобрать состав</span></a>
   </div>
 </section>
 <section id="concerts" class="wrap scene scene-right">
@@ -253,7 +261,7 @@
       <li><strong>Танцевальная часть</strong>
         Сальса и тимба для танцпола. В программу можно добавить выступление танцевальных пар или бразильское шоу.</li>
     </ul>
-    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/program/?outfit=official" data-program-outfit data-action-tone="neutral"><span class="artist-action-label">Собрать программу</span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/program/?outfit=official" data-program-outfit data-action-tone="neutral"><i class="ritmo-button-outline" aria-hidden="true"></i><span class="artist-action-label">Собрать программу</span></a>
   </div>
 </section>
 <section id="rental" class="wrap scene">
@@ -275,7 +283,7 @@
         <dd>Уточним, что есть на площадке и что привезти.</dd>
       </div>
     </dl>
-    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/contacts/?format=Выступление%20артистов&amp;program=Чангито#request" data-action-tone="neutral"><span class="artist-action-label">Запросить выступление</span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/contacts/?format=Выступление%20артистов&amp;program=Чангито#request" data-action-tone="neutral"><i class="ritmo-button-outline" aria-hidden="true"></i><span class="artist-action-label">Запросить выступление</span></a>
   </div>
 </section>
 <section id="artist-shows" class="wrap scene scene-right">
@@ -330,7 +338,7 @@
     <p class="eyebrow">06 · Кубанитас</p>
     <h2>Кубинское ремесло для вашего события</h2>
     <p class="lead">Мастерицы показывают гостям, как вручную сворачивают сигары, и превращают знакомство с кубинской традицией в отдельный живой номер.</p>
-    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/projects/cubanitas/" data-action-tone="neutral"><span class="cubanitas-button-label"><span>Подробнее</span> <span>о шоу «Кубанитас»</span></span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/projects/cubanitas/" data-action-tone="neutral"><i class="ritmo-button-outline" aria-hidden="true"></i><span class="cubanitas-button-label"><span>Подробнее</span> <span>о шоу «Кубанитас»</span></span></a>
   </div>
 </section>
 <section class="wrap" aria-labelledby="dance-promo-title">
