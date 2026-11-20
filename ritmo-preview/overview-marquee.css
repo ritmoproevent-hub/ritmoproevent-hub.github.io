@@ -1,0 +1,65 @@
+.overview-marquee-track > :where([aria-hidden]) { display: none; }
+
+.wrap.marquee-overview {
+  width: 100%;
+  padding-inline: 0;
+  padding-block: clamp(24px, 3.5vw, 48px);
+}
+.artist-scenes .scene.wardrobe-intro,
+.dance-page .marquee-overview + #dance,
+.marquee-overview + #rental-01 {
+  padding-block-start: 0;
+}
+#rental-01 .scene-copy > .lead:first-child { margin-block-start: 0; }
+.seo-overview .overview-marquee {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  max-width: none;
+  font-size: clamp(16px, 2vw, 28px);
+  text-transform: uppercase;
+  text-align: center;
+  min-height: 2lh;
+  overflow: hidden;
+  background-color: #8bc34a;
+  background-image: linear-gradient(rgb(3 21 9 / 50%), rgb(3 21 9 / 50%)), url("https://www.ritmoproduction.ru/assets/artists-marquee-palms.webp");
+  background-repeat: no-repeat, repeat-x;
+  background-size: 100% 100%, auto 140%;
+  background-position: center;
+  color: #fff;
+}
+.seo-overview .overview-marquee--plain {
+  background: var(--calculator-pressed-gray);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .overview-marquee-track {
+    display: flex;
+    width: max-content;
+    min-width: 200%;
+    animation: overview-marquee-scroll 44s linear infinite;
+  }
+  .overview-marquee-track > span {
+    display: block;
+    position: relative;
+    flex: 1 0 auto;
+    padding-inline: .6em;
+    white-space: nowrap;
+  }
+  .overview-marquee-track > span::before,
+  .overview-marquee-track > span:last-child::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: .18em;
+    height: .18em;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .overview-marquee-track > span:last-child::after { left: 100%; }
+}
+
+@keyframes overview-marquee-scroll {
+  to { transform: translateX(-50%); }
+}

@@ -1,0 +1,60 @@
+.seo-overview .platform-marquee {
+  background: #fff;
+  color: #17201e;
+  border-block: 1px solid rgba(21, 25, 24, .14);
+  line-height: 1.05;
+  text-transform: none;
+}
+
+.platform-marquee .overview-marquee-track { animation-duration: 28s; }
+
+.platform-marquee-group {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+}
+.platform-marquee-item {
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: .55em;
+  padding-inline: clamp(16px, 2vw, 32px);
+  font-size: .85em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.platform-marquee-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: .18em;
+  height: .18em;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translateX(-50%);
+}
+.platform-marquee-logo {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+@media (min-width: 851px) {
+  .platform-marquee-logo { width: 32px; height: 32px; }
+}
+.platform-marquee:focus-visible .overview-marquee-track { animation-play-state: paused; }
+
+.marquee-overview + .discography { padding-block-start: 0; }
+.marquee-overview + .discography > .discography-project:first-child { margin-top: 0; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .platform-marquee-group[aria-hidden="true"] { display: flex; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .seo-overview .platform-marquee { overflow-x: auto; }
+  .platform-marquee .overview-marquee-track { min-width: max-content; }
+}
+
+#music-platforms { scroll-margin-top: 110px; }
