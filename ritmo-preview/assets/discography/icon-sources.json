@@ -1,0 +1,24 @@
+{
+  "updated": "2026-11-21",
+  "tunecore-icon.png": {
+    "source": "https://www.tunecore.com/favicon.ico",
+    "notes": "48px image from the official favicon."
+  },
+  "zvonko-icon.svg": {
+    "source": "https://zvonkodigital.ru/favicon.svg",
+    "notes": "Official vector mark without the wordmark."
+  },
+  "vois-icon.png": {
+    "source": "https://rosvois.ru/wp-content/themes/vois/favicon.ico",
+    "notes": "Original 64px pixels converted from ICO to PNG."
+  },
+  "tiktok-icon.svg": {
+    "source": "https://sf16-va.tiktokcdn.com/obj/eden-va2/uvzhqeh7nuhd/tt4d/logo-pack.zip",
+    "reference": "https://developers.tiktok.com/docs/en/getting-started-design-guidelines",
+    "notes": "Original note path from Button_No outline.svg; text and button background omitted."
+  },
+  "boom-icon.png": {
+    "source": "https://corp.vkcdn.ru/media/files/4q19-ir-slide-deckfeb-26final.pdf",
+    "notes": "Legacy BOOM mark extracted with its alpha mask from slide 16 of the official VK/Mail.ru presentation; not the current VK Music favicon."
+  }
+}

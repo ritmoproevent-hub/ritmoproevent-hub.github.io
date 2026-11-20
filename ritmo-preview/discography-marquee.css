@@ -25,6 +25,11 @@
   font-weight: 700;
   white-space: nowrap;
 }
+.platform-marquee-name {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
 .platform-marquee-item::before {
   content: "";
   position: absolute;
@@ -40,21 +45,10 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
-}
-@media (min-width: 851px) {
-  .platform-marquee-logo { width: 32px; height: 32px; }
-}
-.platform-marquee-logo.platform-marquee-logo--wordmark {
-  width: auto;
-  height: 24px;
-  max-width: 150px;
   display: block;
 }
 @media (min-width: 851px) {
-  .platform-marquee-logo.platform-marquee-logo--wordmark {
-    height: 32px;
-    max-width: 190px;
-  }
+  .platform-marquee-logo { width: 32px; height: 32px; }
 }
 .platform-marquee:focus-visible .overview-marquee-track { animation-play-state: paused; }
 
@@ -71,8 +65,3 @@
 
 #music-platforms { scroll-margin-top: 110px; }
 
-.platform-marquee-logo--tunecore { filter: brightness(0); }
-.platform-marquee-logo.platform-marquee-logo--tiktok { width: 99px; }
-@media (min-width: 851px) {
-  .platform-marquee-logo.platform-marquee-logo--tiktok { width: 132px; }
-}
