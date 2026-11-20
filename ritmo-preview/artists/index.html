@@ -66,16 +66,18 @@
 <style id="playlist-outline-style">
 /* Match the outlined footer controls inside the shared control layer. */
 @layer control-finish {
-  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #artist-shows, #cubanitas, .dance-promo-row) .playlist-outline-button {
     background: transparent !important;
     border: 1px solid #000 !important;
     color: #141717 !important;
+    -webkit-text-fill-color: currentColor !important;
+    text-shadow: none !important;
     box-shadow: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
     border-radius: 999px !important;
   }
-  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button :is(.artist-action-label, .cubanitas-button-label, .cubanitas-button-label > span) {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #artist-shows, #cubanitas, .dance-promo-row) .playlist-outline-button :is(.artist-action-label, .artist-action-label > span, .cubanitas-button-label, .cubanitas-button-label > span) {
     color: inherit !important;
     background: none !important;
     background-clip: border-box !important;
@@ -83,11 +85,11 @@
     -webkit-text-fill-color: currentColor !important;
     text-shadow: none !important;
   }
-  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button:hover {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #artist-shows, #cubanitas, .dance-promo-row) .playlist-outline-button:hover {
     opacity: .78;
     transform: none;
   }
-  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button:focus-visible {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #artist-shows, #cubanitas, .dance-promo-row) .playlist-outline-button:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 3px;
   }
@@ -103,7 +105,7 @@
 }
 @layer control-finish {
   @supports (background: conic-gradient(from 0deg, #8b5cf6, #ec4899)) and ((mask-composite: exclude) or (-webkit-mask-composite: xor)) {
-    .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button {
+    .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #artist-shows, #cubanitas, .dance-promo-row) .playlist-outline-button {
       position: relative !important;
       border-color: transparent !important;
     }
@@ -326,7 +328,7 @@
           width="720" height="1280" muted autoplay loop playsinline preload="metadata" aria-label="Танцевальные шоу, ролик"></video>
       </li>
 </ul>
-    <a class="button" href="https://www.ritmoproduction.ru/dance/" data-action-tone="dance"><span class="artist-action-label"><span>Посмотреть</span> <span>танцы и шоу</span></span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/dance/" data-action-tone="neutral"><i class="ritmo-button-outline" aria-hidden="true"></i><span class="artist-action-label"><span>Посмотреть</span> <span>танцы и шоу</span></span></a>
   </div>
 </section>
 <section id="cubanitas" class="wrap scene">
@@ -344,7 +346,7 @@
 <section class="wrap" aria-labelledby="dance-promo-title">
   <div class="section-promo dance-promo-row">
     <h2 id="dance-promo-title">Танцы для вашего мероприятия</h2>
-    <a class="button" href="https://www.ritmoproduction.ru/dance/" data-action-tone="carnival">Перейти к танцорам</a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/dance/" data-action-tone="neutral"><i class="ritmo-button-outline" aria-hidden="true"></i>Перейти к танцорам</a>
   </div>
 </section>
 </div>
