@@ -11,6 +11,7 @@
 <meta name="site-kind" content="other">
 <title>Чангито — кубинская живая музыка на мероприятие</title>
 <link rel="stylesheet" href="https://www.ritmoproduction.ru/style.css?v=e20a8911613e">
+<link rel="stylesheet" href="/ritmo-preview/preview-fonts.css">
 <script src="https://www.ritmoproduction.ru/script.js?v=62acb036b472" defer></script>
 <link rel="stylesheet" href="https://www.ritmoproduction.ru/controls.css?v=fdad9bcc8d8b">
 <style id="artist-style-pills">
@@ -51,7 +52,7 @@
 <link rel="stylesheet" href="https://www.ritmoproduction.ru/seo-layout.css?v=be0d5a14ca4e">
 <link rel="stylesheet" href="https://www.ritmoproduction.ru/overview-marquee.css?v=0ab6f7b9e700">
 <meta name="description" content="Чангито в Санкт-Петербурге: Трио Чангито, расширенный состав и оркестр. Посмотрите видео, узнайте репертуар и подберите живую музыку для вашего мероприятия.">
-<link rel="canonical" href="/ritmo-preview/artists/">
+<link rel="canonical" href="https://www.ritmoproduction.ru/artists/">
 <meta property="og:url" content="https://www.ritmoproduction.ru/artists/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
@@ -63,18 +64,43 @@
 <link rel="stylesheet" href="https://www.ritmoproduction.ru/site-frame.css?v=c13b9347c4fe">
 
 <style id="playlist-outline-style">
-.artist-scenes #music .playlist-outline-button{background:transparent!important;border:1px solid #141717!important;color:#141717!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border-radius:999px!important;}
-.artist-scenes #music .playlist-outline-button .artist-action-label{color:inherit!important;background:none!important;background-clip:border-box!important;-webkit-background-clip:border-box!important;-webkit-text-fill-color:currentColor!important;text-shadow:none!important;}
-.artist-scenes #music .playlist-outline-button:hover{background:transparent!important;border-color:#141717!important;color:#141717!important;transform:translateY(-2px);}
+/* Match the outlined footer controls inside the shared control layer. */
+@layer control-finish {
+  .artist-scenes #music .playlist-outline-button {
+    background: transparent !important;
+    border: 1px solid #000 !important;
+    color: #141717 !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border-radius: 999px !important;
+  }
+  .artist-scenes #music .playlist-outline-button .artist-action-label {
+    color: inherit !important;
+    background: none !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+    -webkit-text-fill-color: currentColor !important;
+    text-shadow: none !important;
+  }
+  .artist-scenes #music .playlist-outline-button:hover {
+    opacity: .78;
+    transform: none;
+  }
+  .artist-scenes #music .playlist-outline-button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+}
 </style>
 </head>
 <body>
-<a class="skip" href="https://www.ritmoproduction.ru/artists/#main">К содержанию</a>
+<a class="skip" href="#main">К содержанию</a>
 <header class="header" data-scroll-glass><div class="wrap bar">
-<a class="logo" href="https://www.ritmoproduction.ru/#home" aria-label="RITMO Production, главная"><img src="https://www.ritmoproduction.ru/assets/logo-20261115-aligned.svg" width="1876" height="598" alt="RITMO Production"></a>
+<a class="logo" href="/ritmo-preview/#home" aria-label="RITMO Production, главная"><img src="https://www.ritmoproduction.ru/assets/logo-20261115-aligned.svg" width="1876" height="598" alt="RITMO Production"></a>
 <button class="menu" type="button" aria-expanded="false" aria-controls="nav" hidden>Меню</button>
 <nav id="nav" aria-label="Основная навигация">
-<a href="/ritmo-preview/artists/" aria-current="page"><span class="nav-label">Артисты</span></a><a href="https://www.ritmoproduction.ru/dance/"><span class="nav-label">Танцы</span></a><a href="https://www.ritmoproduction.ru/media/"><span class="nav-label">Медиа</span></a><a href="https://www.ritmoproduction.ru/discography/"><span class="nav-label">Дискография</span></a><a href="https://www.ritmoproduction.ru/rental/"><span class="nav-label">Аренда</span></a><a href="https://www.ritmoproduction.ru/contacts/"><span class="nav-label">Контакты</span></a>
+<a href="/ritmo-preview/artists/" aria-current="page"><span class="nav-label">Артисты</span></a><a href="https://www.ritmoproduction.ru/dance/"><span class="nav-label">Танцы</span></a><a href="https://www.ritmoproduction.ru/media/"><span class="nav-label">Медиа</span></a><a href="/ritmo-preview/discography/"><span class="nav-label">Дискография</span></a><a href="https://www.ritmoproduction.ru/rental/"><span class="nav-label">Аренда</span></a><a href="https://www.ritmoproduction.ru/contacts/"><span class="nav-label">Контакты</span></a>
 </nav>
 <div class="header-contacts" role="group" aria-label="Быстрая связь">
   <a href="tel:+79119296445" aria-label="Позвонить: +7 911 929-64-45" title="Позвонить"><img src="https://www.ritmoproduction.ru/assets/contact-icons/phone.svg" width="36" height="36" alt=""></a>
@@ -189,7 +215,7 @@
     <dl class="artist-formats">
       <div>
         <dt>Репертуар и состав</dt>
-        <dd><a class="inline" href="https://www.ritmoproduction.ru/artists/#music">Посмотрите репертуар</a> и <a class="inline" href="https://www.ritmoproduction.ru/artists/#artists">выберите состав</a>.</dd>
+        <dd><a class="inline" href="#music">Посмотрите репертуар</a> и <a class="inline" href="#artists">выберите состав</a>.</dd>
       </div>
       <div>
         <dt>Дата, площадка и длительность</dt>
@@ -268,7 +294,7 @@
 </main>
 <footer class="site-footer">
   <div class="wrap bar">
-    <a class="logo" href="https://www.ritmoproduction.ru/" aria-label="RITMO Production, главная"><img src="https://www.ritmoproduction.ru/assets/logo-20261115-aligned.svg" width="1876" height="598" alt="RITMO Production"></a>
+    <a class="logo" href="/ritmo-preview/" aria-label="RITMO Production, главная"><img src="https://www.ritmoproduction.ru/assets/logo-20261115-aligned.svg" width="1876" height="598" alt="RITMO Production"></a>
     <div class="footer-links">
       <div class="footer-actions footer-contacts" role="group" aria-label="Связаться с RITMO Production">
         <a class="footer-contact-icon" href="tel:+79119296445" aria-label="Телефон"><img src="https://www.ritmoproduction.ru/assets/contact-icons/phone.svg" width="20" height="20" alt=""></a>
