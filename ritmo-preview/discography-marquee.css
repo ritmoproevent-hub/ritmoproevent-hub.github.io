@@ -21,7 +21,7 @@
   justify-content: center;
   gap: .55em;
   padding-inline: clamp(16px, 2vw, 32px);
-  font-size: .85em;
+  font-size: .76em;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -42,13 +42,13 @@
 }
 .platform-marquee-logo {
   flex: none;
-  width: 24px;
-  height: 24px;
+  width: 21px;
+  height: 21px;
   object-fit: contain;
   display: block;
 }
 @media (min-width: 851px) {
-  .platform-marquee-logo { width: 32px; height: 32px; }
+  .platform-marquee-logo { width: 28px; height: 28px; }
 }
 .platform-marquee:focus-visible .overview-marquee-track { animation-play-state: paused; }
 
