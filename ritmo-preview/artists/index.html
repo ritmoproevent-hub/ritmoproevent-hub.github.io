@@ -66,7 +66,7 @@
 <style id="playlist-outline-style">
 /* Match the outlined footer controls inside the shared control layer. */
 @layer control-finish {
-  .artist-scenes :is(#about, #music) .playlist-outline-button {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental) .playlist-outline-button {
     background: transparent !important;
     border: 1px solid #000 !important;
     color: #141717 !important;
@@ -75,7 +75,7 @@
     backdrop-filter: none !important;
     border-radius: 999px !important;
   }
-  .artist-scenes :is(#about, #music) .playlist-outline-button .artist-action-label {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental) .playlist-outline-button .artist-action-label {
     color: inherit !important;
     background: none !important;
     background-clip: border-box !important;
@@ -83,11 +83,11 @@
     -webkit-text-fill-color: currentColor !important;
     text-shadow: none !important;
   }
-  .artist-scenes :is(#about, #music) .playlist-outline-button:hover {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental) .playlist-outline-button:hover {
     opacity: .78;
     transform: none;
   }
-  .artist-scenes :is(#about, #music) .playlist-outline-button:focus-visible {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental) .playlist-outline-button:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 3px;
   }
@@ -188,7 +188,7 @@
         <dd>Вокал, бас, фортепиано, перкуссия, ударные, труба, тромбон и саксофон. Три духовых инструмента придают мелодиям мощное звучание. Подойдёт для фестиваля или праздника, где концерт становится главным событием вечера.</dd>
       </div>
     </dl>
-    <a class="button" href="https://www.ritmoproduction.ru/program/?outfit=official" data-program-outfit data-action-tone="music"><span class="artist-action-label">Подобрать состав</span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/program/?outfit=official" data-program-outfit data-action-tone="neutral"><span class="artist-action-label">Подобрать состав</span></a>
   </div>
 </section>
 <section id="concerts" class="wrap scene scene-right">
@@ -204,7 +204,7 @@
       <li><strong>Танцевальная часть</strong>
         Сальса и тимба для танцпола. В программу можно добавить выступление танцевальных пар или бразильское шоу.</li>
     </ul>
-    <a class="button" href="https://www.ritmoproduction.ru/program/?outfit=official" data-program-outfit data-action-tone="music"><span class="artist-action-label">Собрать программу</span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/program/?outfit=official" data-program-outfit data-action-tone="neutral"><span class="artist-action-label">Собрать программу</span></a>
   </div>
 </section>
 <section id="rental" class="wrap scene">
@@ -226,7 +226,7 @@
         <dd>Уточним, что есть на площадке и что привезти.</dd>
       </div>
     </dl>
-    <a class="button" href="https://www.ritmoproduction.ru/contacts/?format=Выступление%20артистов&amp;program=Чангито#request" data-action-tone="music"><span class="artist-action-label">Запросить выступление</span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/contacts/?format=Выступление%20артистов&amp;program=Чангито#request" data-action-tone="neutral"><span class="artist-action-label">Запросить выступление</span></a>
   </div>
 </section>
 <section id="artist-shows" class="wrap scene scene-right">
