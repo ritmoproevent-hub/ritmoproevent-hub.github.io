@@ -66,7 +66,7 @@
 <style id="playlist-outline-style">
 /* Match the outlined footer controls inside the shared control layer. */
 @layer control-finish {
-  .artist-scenes :is(#about, #music, #artists, #concerts, #rental) .playlist-outline-button {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button {
     background: transparent !important;
     border: 1px solid #000 !important;
     color: #141717 !important;
@@ -75,7 +75,7 @@
     backdrop-filter: none !important;
     border-radius: 999px !important;
   }
-  .artist-scenes :is(#about, #music, #artists, #concerts, #rental) .playlist-outline-button .artist-action-label {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button :is(.artist-action-label, .cubanitas-button-label, .cubanitas-button-label > span) {
     color: inherit !important;
     background: none !important;
     background-clip: border-box !important;
@@ -83,11 +83,11 @@
     -webkit-text-fill-color: currentColor !important;
     text-shadow: none !important;
   }
-  .artist-scenes :is(#about, #music, #artists, #concerts, #rental) .playlist-outline-button:hover {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button:hover {
     opacity: .78;
     transform: none;
   }
-  .artist-scenes :is(#about, #music, #artists, #concerts, #rental) .playlist-outline-button:focus-visible {
+  .artist-scenes :is(#about, #music, #artists, #concerts, #rental, #cubanitas) .playlist-outline-button:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 3px;
   }
@@ -281,7 +281,7 @@
     <p class="eyebrow">06 · Кубанитас</p>
     <h2>Кубинское ремесло для вашего события</h2>
     <p class="lead">Мастерицы показывают гостям, как вручную сворачивают сигары, и превращают знакомство с кубинской традицией в отдельный живой номер.</p>
-    <a class="button" href="https://www.ritmoproduction.ru/projects/cubanitas/" data-action-tone="cubanitas"><span class="cubanitas-button-label"><span>Подробнее</span> <span>о шоу «Кубанитас»</span></span></a>
+    <a class="button playlist-outline-button" href="https://www.ritmoproduction.ru/projects/cubanitas/" data-action-tone="neutral"><span class="cubanitas-button-label"><span>Подробнее</span> <span>о шоу «Кубанитас»</span></span></a>
   </div>
 </section>
 <section class="wrap" aria-labelledby="dance-promo-title">
