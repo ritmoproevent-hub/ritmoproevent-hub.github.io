@@ -20,5 +20,15 @@
   "boom-icon.png": {
     "source": "https://corp.vkcdn.ru/media/files/4q19-ir-slide-deckfeb-26final.pdf",
     "notes": "Legacy BOOM mark extracted with its alpha mask from slide 16 of the official VK/Mail.ru presentation; not the current VK Music favicon."
+  },
+  "rutube-icon.png": {
+    "source": "https://static.rtbcdn.ru/static/img/favicon-icons/v3/icon_180x180.png",
+    "reference": "https://rutube.ru/",
+    "notes": "Original 180px RGBA favicon from the official site's rel=icon assets; unchanged image."
+  },
+  "zvuk-icon.png": {
+    "source": "https://zvuk.com/favicon.ico",
+    "reference": "https://zvuk.com/",
+    "notes": "Original 75px RGBA favicon frame converted losslessly from ICO to PNG; unchanged image."
   }
 }
