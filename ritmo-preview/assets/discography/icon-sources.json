@@ -30,5 +30,9 @@
     "source": "https://zvuk.com/favicon.ico",
     "reference": "https://zvuk.com/",
     "notes": "Original 75px RGBA favicon frame converted losslessly from ICO to PNG; unchanged image."
+  },
+  "vk-music-user.webp": {
+    "source": "User-provided VK Music icon",
+    "notes": "Original 600x600 RGBA WebP uploaded by the user; copied without changing its pixels or transparency."
   }
 }
